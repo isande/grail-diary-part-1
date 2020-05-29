@@ -15,10 +15,27 @@ class POIsTableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
         tableView.delegate = self
         tableView.dataSource = self
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
+            
+            let newPOIVC = segue.destination as? AddPOIViewController
+            
+            newPOIVC?.delegate = self
+            
+        } else if segue.identifier == "ShowPOIDetailSegue" {
+            
+            if let detailVC = segue.destination as? POIDetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow {
+                let poi = pois[indexPath.row]
+                detailVC.poi = poi
+            }
+        }
     }
 }
 
@@ -34,17 +51,21 @@ extension POIsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
-        
-        let poi = pois[indexPath.row]
-        
+                
         cell.locationLabel.text = pois[indexPath.row].location
         cell.countryLabel.text = pois[indexPath.row].country
-        cell.cluesCountLabel.text = "\(pois[indexPath.row].clues.count)"
+        cell.cluesCountLabel.text = "\(pois[indexPath.row].clues.count) clues"
         
         return cell
     }
     
-    
-    
 }
 
+extension POIsTableViewController: AddPOIDelegate {
+    
+    func poiWasAdded(_ poi: POI) {
+        pois.append(poi)
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
+    }
+}
