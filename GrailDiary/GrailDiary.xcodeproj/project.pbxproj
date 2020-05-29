@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F439C4CA248071EF00BD58ED /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C4C9248071EF00BD58ED /* AddPOIViewController.swift */; };
+		F439C4CC2480720C00BD58ED /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C4CB2480720C00BD58ED /* POIDetailViewController.swift */; };
+		F439C4CE2480722D00BD58ED /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C4CD2480722D00BD58ED /* POITableViewCell.swift */; };
+		F439C4D02480724700BD58ED /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C4CF2480724700BD58ED /* POI.swift */; };
 		F49F0A9324789E7C00BC022A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F0A9224789E7C00BC022A /* AppDelegate.swift */; };
 		F49F0A9524789E7C00BC022A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F0A9424789E7C00BC022A /* SceneDelegate.swift */; };
 		F49F0A9724789E7C00BC022A /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F0A9624789E7C00BC022A /* POIsTableViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F439C4C9248071EF00BD58ED /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		F439C4CB2480720C00BD58ED /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		F439C4CD2480722D00BD58ED /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		F439C4CF2480724700BD58ED /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		F49F0A8F24789E7C00BC022A /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49F0A9224789E7C00BC022A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F49F0A9424789E7C00BC022A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F439C4D12480725800BD58ED /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F49F0A9824789E7C00BC022A /* Main.storyboard */,
+				F49F0A9D24789E7D00BC022A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F439C4D22480726D00BD58ED /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F49F0A9624789E7C00BC022A /* POIsTableViewController.swift */,
+				F439C4C9248071EF00BD58ED /* AddPOIViewController.swift */,
+				F439C4CB2480720C00BD58ED /* POIDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F439C4D32480727A00BD58ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F439C4CD2480722D00BD58ED /* POITableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F439C4D42480728400BD58ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F439C4CF2480724700BD58ED /* POI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F49F0A8624789E7C00BC022A = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +101,11 @@
 			children = (
 				F49F0A9224789E7C00BC022A /* AppDelegate.swift */,
 				F49F0A9424789E7C00BC022A /* SceneDelegate.swift */,
-				F49F0A9624789E7C00BC022A /* POIsTableViewController.swift */,
-				F49F0A9824789E7C00BC022A /* Main.storyboard */,
+				F439C4D22480726D00BD58ED /* View Controllers */,
+				F439C4D12480725800BD58ED /* Storyboards */,
+				F439C4D32480727A00BD58ED /* Views */,
+				F439C4D42480728400BD58ED /* Model */,
 				F49F0A9B24789E7D00BC022A /* Assets.xcassets */,
-				F49F0A9D24789E7D00BC022A /* LaunchScreen.storyboard */,
 				F49F0AA024789E7D00BC022A /* Info.plist */,
 			);
 			path = GrailDiary;
@@ -138,9 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F439C4D02480724700BD58ED /* POI.swift in Sources */,
 				F49F0A9724789E7C00BC022A /* POIsTableViewController.swift in Sources */,
+				F439C4CA248071EF00BD58ED /* AddPOIViewController.swift in Sources */,
 				F49F0A9324789E7C00BC022A /* AppDelegate.swift in Sources */,
 				F49F0A9524789E7C00BC022A /* SceneDelegate.swift in Sources */,
+				F439C4CE2480722D00BD58ED /* POITableViewCell.swift in Sources */,
+				F439C4CC2480720C00BD58ED /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AWA886HZ93;
 				INFOPLIST_FILE = GrailDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AWA886HZ93;
 				INFOPLIST_FILE = GrailDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
